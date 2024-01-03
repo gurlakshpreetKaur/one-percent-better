@@ -38,7 +38,8 @@ const config: Config = {
       }
     },
     fontFamily: {
-      "noto": ["'Noto Serif'", "serif"]
+      "noto": ["'Noto Serif'", "serif"],
+      "source": ["'Source Serif 4'", "serif"]
     }
   },
   plugins: [],

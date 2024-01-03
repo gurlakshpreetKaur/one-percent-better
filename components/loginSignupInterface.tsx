@@ -16,9 +16,9 @@ export default function LoginSignupInterface() {
     return (<section
         className={`bg-white bg-opacity-45
         py-8 px-8
-        rounded-md border-[1px] border-solid border-yerba-mate-500
+        rounded-md border-4 border-solid border-yerba-mate-500
         text-center`}>
-        <h2 className="font-noto text-yerba-mate-600 text-xl mb-3 font-medium">Login</h2>
+        <h2 className="font-noto text-yerba-mate-600 text-4xl mb-3 font-medium">Login</h2>
         <form onSubmit={onSubmit}>
             <YerbaMateInput type="text" placeholder="Enter your email..." />
             <br />
