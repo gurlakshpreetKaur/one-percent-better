@@ -34,7 +34,7 @@ export default function LandingPage() {
               <YerbaMateInput placeholder="Enter your name..." />
               <YerbaMateInput placeholder="Enter your email..." />
               <YerbaMateInput placeholder="Enter your password..." type="password" />
-              <button>Sign me up</button>
+              <button className="my-2 bg-yerba-mate-600 text-white font-noto rounded-sm">Sign me up</button>
             </div>
           </div>
         </section>
