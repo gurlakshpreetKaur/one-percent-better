@@ -2,7 +2,8 @@
    When no user is logged in, a log-in/sign-up page + features and graphics will be displayed
    If a user is logged in, it will open up directly to the user dashboard */
 import LoginSignupInterface from '@/components/LandingPage/LoginSignupInterface';
-import DetailsSection from '@/components/LandingPage/detailsSection';
+import DetailsSection from '@/components/LandingPage/DetailsSection';
+import NavBar from '@/components/NavBar';
 
 export default function Page() {
   const loggedIn = true;
@@ -15,7 +16,7 @@ export default function Page() {
  */
 function Home() {
   return <main className="min-h-screen bg-coffee-300">
-
+    <NavBar />
   </main>;
 }
 
