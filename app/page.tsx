@@ -4,6 +4,7 @@
 import LoginSignupInterface from '@/components/LandingPage/LoginSignupInterface';
 import DetailsSection from '@/components/LandingPage/DetailsSection';
 import NavBar from '@/components/NavBar';
+import HomeMain from '@/components/Home/Home';
 
 export default function Page() {
   const loggedIn = true;
@@ -15,8 +16,9 @@ export default function Page() {
  * This is the user dashboard which will be shown if the user is logged in.
  */
 function Home() {
-  return <main className="min-h-screen bg-coffee-300">
+  return <main className="min-h-screen bg-coffee-100">
     <NavBar />
+    <HomeMain />
   </main>;
 }
 
