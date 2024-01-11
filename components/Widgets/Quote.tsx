@@ -3,6 +3,9 @@ import { useState } from "react";
 import WidgetContainer from "./WidgetContainer";
 const getQuote = require('forbes-quote');
 
+/**
+ * Creates a quote widget that fetches forbes daily quotes
+ */
 export default async function Quote() {
     const { quote, author } = await getQuote();
     console.log(quote);

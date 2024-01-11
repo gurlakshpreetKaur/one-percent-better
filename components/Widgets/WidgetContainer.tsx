@@ -1,3 +1,8 @@
+/**
+ * A widget container with yerba-mate bg and hover effects.
+ * @param {JSX.Element | JSX.Element[]} children: Children of the container
+ * @param {string} widgetName: Name of the widget, creates a heading for the widget
+ */
 export default function WidgetContainer({ children, widgetName }: { children: JSX.Element | JSX.Element[], widgetName: string }) {
     return <div className="bg-yerba-mate-300 rounded-xl px-5 pt-4 pb-5 group">
         <span className="inline-block mb-3 hover:cursor-pointer">

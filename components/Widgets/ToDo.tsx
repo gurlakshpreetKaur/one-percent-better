@@ -1,5 +1,9 @@
 import WidgetContainer from "./WidgetContainer"
 
+/**
+ * Creates a to-do list widget for side pane of widgets
+ * 
+ */
 export default function ToDo() {
     return <WidgetContainer widgetName="To do">
 
