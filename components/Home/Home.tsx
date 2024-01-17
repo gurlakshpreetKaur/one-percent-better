@@ -1,5 +1,6 @@
+import NoteToSelf from "../Widgets/NoteToSelf";
 import Quote from "../Widgets/Quote";
-import ToDo from "../Widgets/ToDo";
+import ToDo from "../Widgets/ToDo/ToDo";
 
 export default function HomeMain() {
     return <div className="w-full h-full grid grid-cols-[2fr_0fr] md:grid-cols-[2fr_1fr] mt-12">
@@ -8,6 +9,7 @@ export default function HomeMain() {
             <h2 className="text-xl text-yerba-mate-600 font-source font-semibold">Quick Bits</h2>
             <Quote />
             <ToDo />
+            <NoteToSelf />
         </section>
     </div>
 }
