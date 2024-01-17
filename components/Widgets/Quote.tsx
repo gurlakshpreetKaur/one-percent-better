@@ -11,7 +11,7 @@ export default async function Quote() {
 
     return (<WidgetContainer widgetName="Quote of the Day">
         <div className="p-2">
-            <p className="text-lg font-source font-normal italic cursor-pointer">
+            <p className="font-normal cursor-pointer">
                 "{quote}"
             </p>
             <p className="text-right font-noto mt-2 font-medium">— {author}</p>
