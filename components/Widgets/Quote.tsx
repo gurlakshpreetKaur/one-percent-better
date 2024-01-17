@@ -1,20 +1,20 @@
-// 'use client'
-import { useState } from "react";
 import WidgetContainer from "./WidgetContainer";
-const getQuote = require('forbes-quote');
+import axios from "axios";
 
 /**
- * Creates a quote widget that fetches forbes daily quotes
+ * Creates a quote widget that fetches zen quotes daily quotes.
+ * Server-side rendering.
  */
 export default async function Quote() {
-    const { quote, author } = await getQuote();
-    console.log(quote);
+    const response = await axios.get('https://zenquotes.io/api/today/');
+    const [{ q: quote, a: author }] = response.data;
+
     return (<WidgetContainer widgetName="Quote of the Day">
         <div className="p-2">
-            <p className="text-xl font-source font-medium italic cursor-pointer">
+            <p className="text-lg font-source font-normal italic cursor-pointer">
                 "{quote}"
             </p>
-            <p className="text-right font-noto mt-2">{author}</p>
+            <p className="text-right font-noto mt-2 font-medium">— {author}</p>
         </div>
     </WidgetContainer>)
 }
