@@ -18,11 +18,17 @@ export default function NoteToSelf() {
     }, []);
 
     useEffect(() => {
+        console.log(ntsText.length);
         localStorage.setItem('nts', ntsText);
     }, [ntsText]);
 
     return <WidgetContainer widgetName="Note to Self" noPadding>
-        <textarea className="bg-transparent outline-none w-full h-full resize-none text-md px-5 py-3 focus:bg-white rounded-lg"
+        <textarea className={`${ntsText.length === 0 ? "bg-transparent" : "bg-white"}
+        outline-none 
+        w-full h-full resize-none px-5 py-3
+        text-md 
+        rounded-lg 
+        placeholder:text-yerba-mate-400 focus:placeholder:text-yerba-mate-600`}
             placeholder="Jot down some thoughts..."
             value={ntsText}
             onChange={(e) => setntsText(e.target.value.substring(0, 1000))}>
