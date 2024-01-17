@@ -1,3 +1,4 @@
+import Journal from "../Widgets/Journal";
 import NoteToSelf from "../Widgets/NoteToSelf";
 import Quote from "../Widgets/Quote";
 import ToDo from "../Widgets/ToDo/ToDo";
@@ -10,6 +11,7 @@ export default function HomeMain() {
             <Quote />
             <ToDo />
             <NoteToSelf />
+            <Journal />
         </section>
     </div>
 }
