@@ -18,7 +18,8 @@ export function CoffeeInput({ type = "text", placeholder = "", ariaPlaceholder =
         bg-white bg-opacity-40 focus:bg-opacity-90
         rounded-full border-2 border-solid border-coffee-500 outline-none hover:outline-none
         px-3 py-1 my-1
-        text-sm`} />
+        text-sm
+        placeholder:text-coffee-1000`} />
 }
 
 /**
@@ -35,5 +36,6 @@ export function YerbaMateInput({ type = "text", placeholder = "", ariaPlaceholde
         bg-white bg-opacity-40 focus:bg-opacity-90
         rounded-full border-2 border-solid border-yerba-mate-500 outline-none hover:outline-none
         px-3 py-1 my-1
-        text-sm`} />
+        text-sm
+        placeholder:text-yerba-mate-700`} />
 }
