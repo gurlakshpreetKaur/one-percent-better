@@ -23,16 +23,18 @@ export default function NoteToSelf() {
     }, [ntsText]);
 
     return <WidgetContainer widgetName="Note to Self" noPadding>
+        {/* <div className="w-full h-full p-3"> */}
         <textarea className={`${ntsText.length === 0 ? "bg-transparent" : "bg-white"}
         outline-none 
-        w-full h-full resize-none px-5 py-3
+        w-full h-full resize-none p-5
         text-md 
-        rounded-lg 
-        placeholder:text-yerba-mate-400 focus:placeholder:text-yerba-mate-600`}
+        rounded-lg
+        placeholder:text-yerba-mate-400 focus:placeholder:text-yerba-mate-600 focus:bg-white`}
             placeholder="Jot down some thoughts..."
             value={ntsText}
             onChange={(e) => setntsText(e.target.value.substring(0, 1000))}>
 
         </textarea>
+        {/* </div> */}
     </WidgetContainer>
 }
