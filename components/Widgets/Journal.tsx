@@ -44,22 +44,24 @@ export default function Journal() {
     const [journalText, setJournalText] = useState("");
 
     return <WidgetContainer widgetName="Journal" noPadding>
-        <div className={`${journalText.length === 0 ? "bg-transparent" : "bg-white"} text-left w-full h-full rounded-lg`}>
-            <header className="w-full flex justify-between px-5">
-                <button className="text-yerba-mate-600 hover:text-coffee-400" onClick={decrementDate} aria-label="Previous-date"><AiOutlineArrowLeft /></button>
-                <h3 className={`inline-block text-center text-yerba-mate-600 font-noto font-medium pt-3 pb-1`}>{formattedDisplayDate()}</h3>
-                <button className="text-yerba-mate-600 hover:text-coffee-400" onClick={incrementDate} aria-label="Next-date" disabled={hasTodayBeenSelected()}><AiOutlineArrowRight /></button>
-            </header>
+        <div className="py-2">
+            <div className={`${journalText.length === 0 ? "bg-transparent" : "bg-white"} text-left w-full h-full rounded-lg`}>
+                <header className="w-full flex justify-between px-5">
+                    <button className="text-yerba-mate-600 hover:text-coffee-400" onClick={decrementDate} aria-label="Previous-date"><AiOutlineArrowLeft /></button>
+                    <h3 className={`inline-block text-center text-yerba-mate-600 font-noto font-medium pt-3 pb-1`}>{formattedDisplayDate()}</h3>
+                    <button className="text-yerba-mate-600 hover:text-coffee-400" onClick={incrementDate} aria-label="Next-date" disabled={hasTodayBeenSelected()}><AiOutlineArrowRight /></button>
+                </header>
 
-            <textarea className={`bg-transparent
-            w-full h-full resize-none px-5 pb-2
+                <textarea className={`bg-transparent
+            w-full h-full resize-none px-5 pb-2 pt-1
             text-md 
             rounded-b-lg outline-none
           placeholder:text-yerba-mate-400 focus:placeholder:text-yerba-mate-600
             ${!hasTodayBeenSelected() ? "cursor-not-allowed" : ""}`}
-                placeholder="Today has been..." onChange={(e) => setJournalText(e.target.value)}
-                readOnly={!hasTodayBeenSelected()}>
-            </textarea>
+                    placeholder="Today has been..." onChange={(e) => setJournalText(e.target.value)}
+                    readOnly={!hasTodayBeenSelected()}>
+                </textarea>
+            </div>
         </div>
     </WidgetContainer>
 }
