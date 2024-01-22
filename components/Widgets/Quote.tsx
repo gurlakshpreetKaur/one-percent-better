@@ -10,13 +10,11 @@ export default async function Quote() {
     const [{ q: quote, a: author }] = response.data;
 
     return (<WidgetContainer widgetName="Quote of the Day">
-        <div className="flex h-full pb-4 px-4 justify-center items-center">
-            <div className="mx-auto my-auto">
-                <p className="font-normal cursor-pointer">
-                    "{quote}"
-                </p>
-                <p className="text-right font-noto mt-2 font-medium">— {author}</p>
-            </div>
+        <div className="flex flex-col h-full py-5 px-4 justify-between items-between">
+            <p className="font-normal cursor-pointer">
+                "{quote}"
+            </p>
+            <p className="text-right font-noto mt-2 font-medium">— {author}</p>
         </div>
     </WidgetContainer>)
 }
