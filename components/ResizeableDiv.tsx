@@ -1,5 +1,8 @@
 "use client"
 
+//CURRENTLY NON-FUNCTIONAL
+//TODO: make this work
+
 import { MouseEvent, MouseEventHandler, useRef } from "react";
 
 export default function ResizeableDiv({ children, className = "" }: { children: JSX.Element | JSX.Element[], className?: string }) {
