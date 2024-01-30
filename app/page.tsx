@@ -16,7 +16,7 @@ export default function Page() {
  * This is the user dashboard which will be shown if the user is logged in.
  */
 function Home() {
-  return <main className="min-h-screen bg-coffee-100">
+  return <main className="min-h-screen bg-coffee-100 overflow-hidden">
     <NavBar />
     <HomeMain />
   </main>;
