@@ -5,6 +5,7 @@ import Journal from "../Widgets/Journal";
 import NoteToSelf from "../Widgets/NoteToSelf";
 import Quote from "../Widgets/Quote";
 import ToDo from "../Widgets/ToDo/ToDo";
+import Calendar from "./Calendar";
 
 function WidgetsPane() {
     return (<ResizeableDiv className="w-2/3 min-w-[350px] fixed 
@@ -25,7 +26,9 @@ function WidgetsPane() {
 
 export default function HomeMain() {
     return <div className="w-full h-full mt-12 overflow-hidden">
-        <section className="bg-red min-h-screen"><h1>H</h1></section>
+        <section className="bg-red min-h-screen">
+            <Calendar />
+        </section>
         <WidgetsPane />
     </div >
 }
