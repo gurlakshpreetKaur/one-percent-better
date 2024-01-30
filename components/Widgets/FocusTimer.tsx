@@ -71,7 +71,7 @@ export default function FocusTimer() {
         }
     }
 
-    return <WidgetContainer widgetName="Focus Timer">
+    return <WidgetContainer widgetName="Focus Timer" activeIndicator={started}>
         <div className="py-5">
             <p>Get in the zone, and allow yourself to focus</p>
             <span className="inline-block my-3">
@@ -88,7 +88,7 @@ export default function FocusTimer() {
                 onClick={() => setPaused(prev => !prev)}>
                 {paused ? <AiOutlinePlayCircle /> : <AiOutlinePauseCircle />}
             </button>}
-            <button className={`${started ? "bg-red-500 hover:bg-red-600" : "bg-yerba-mate-600 hover:bg-yerba-mate-800"}
+            <button className={`${started ? "bg-black hover:bg-red-600" : "bg-yerba-mate-600 hover:bg-yerba-mate-800"}
             text-md p-2 mt-2 text-white rounded-full mx-2`}
                 onClick={startOrStopTimer}>{started ? <AiOutlineStop /> : <AiOutlinePlayCircle />}</button>
         </div>

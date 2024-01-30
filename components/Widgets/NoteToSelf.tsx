@@ -22,7 +22,7 @@ export default function NoteToSelf() {
         localStorage.setItem('nts', ntsText);
     }, [ntsText]);
 
-    return <WidgetContainer widgetName="Note to Self" noPadding>
+    return <WidgetContainer widgetName="Note to Self" activeIndicator={ntsText !== ""} noPadding>
         {/* <div className="w-full h-full p-3"> */}
         <textarea className={`${ntsText.length === 0 ? "bg-transparent" : "bg-white"}
         outline-none 
