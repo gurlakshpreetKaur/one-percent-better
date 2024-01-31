@@ -25,10 +25,12 @@ function WidgetsPane() {
 }
 
 export default function HomeMain() {
-    return <div className="w-full h-full mt-12 overflow-hidden">
-        <section className="bg-red min-h-screen">
-            <Calendar />
-        </section>
+    return <>
+        <div className="w-full h-full mt-12 overflow-hidden">
+            <section className="min-h-screen">
+                <Calendar />
+            </section>
+        </div >
         <WidgetsPane />
-    </div >
+    </>
 }
